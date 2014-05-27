@@ -98,7 +98,7 @@ describe User do
       it { should eq found_user.authenticate(@user.password) }
     end
 
-  describe "with invalid password" do
+    describe "with invalid password" do
       let(:user_for_invalid_password) { found_user.authenticate("invalid") }
 
       it { should_not eq user_for_invalid_password }
